@@ -31,15 +31,15 @@ body {
   padding-right: 10px;
 }
 
-.justifyStart {
+.alignStart {
   align-items: flex-start;
 }
 
-.justifyCenter {
+.alignCenter {
   align-items: center;
 }
 
-.justifyEnd {
+.alignEnd {
   align-items: flex-end;
 }
 

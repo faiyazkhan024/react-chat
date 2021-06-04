@@ -17,34 +17,31 @@ const Message = ({ message: { text, user }, name }) => {
 
   switch (user) {
     case trimmedName:
-      pColor = "colorWhite";
-      bgColor = "backgroundSecondary";
-      alignment = "justifyEnd";
+      pColor = " colorWhite ";
+      bgColor = " backgroundSecondary ";
+      alignment = " alignEnd ";
       senderName = trimmedName;
-      none = "";
       break;
     case "Bot":
-      pColor = "colorWhite alertText";
-      bgColor = "backgroundAccent alertBox";
-      alignment = "justifyCenter";
-      senderName = "";
-      none = "displayNone";
+      pColor = " colorDark alertText ";
+      bgColor = " backgroundLight alertBox ";
+      alignment = " alignCenter ";
+      none = " displayNone ";
       break;
     default:
-      pColor = "colorDark ";
-      bgColor = "backgroundLight";
-      alignment = "justifyStart";
+      pColor = " colorWhite ";
+      bgColor = " backgroundAccent ";
+      alignment = " alignStart ";
       senderName = user;
-      none = "";
   }
 
   return (
-    <div className={"messageContainer " + alignment}>
-      <p className={"sentText " + none}>{senderName}</p>
-      <div className={"messageBox " + bgColor}>
-        <p className={"messageText " + pColor}>{ReactEmoji.emojify(text)}</p>
+    <div className={" messageContainer " + alignment}>
+      <p className={" sentText " + none}>{senderName}</p>
+      <div className={" messageBox " + bgColor}>
+        <p className={" messageText " + pColor}>{ReactEmoji.emojify(text)}</p>
       </div>
-      <p className={"sentText " + none}>{currentTime()}</p>
+      <p className={" sentText " + none}>{currentTime()}</p>
     </div>
   );
 };

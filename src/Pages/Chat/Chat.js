@@ -9,7 +9,7 @@ import Input from "../../components/Input/Input";
 import Messages from "../../components/Messages/Messages";
 import TextContainer from "../../components/TextContainer/TextContainer";
 
-import classes from "./Chat.module.css";
+import "./Chat.css";
 
 let socket;
 
@@ -64,8 +64,8 @@ const Chat = ({ location }) => {
       <Helmet>
         <title>ReactChat | Room {room}</title>
       </Helmet>
-      <div className={classes.outerContainer}>
-        <div className={classes.container}>
+      <div className="outerContainer">
+        <div className="container">
           <InfoBar room={room} />
           <Messages messages={messages} name={name} />
           <Input
