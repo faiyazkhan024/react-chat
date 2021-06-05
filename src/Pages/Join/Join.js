@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
 import { Helmet } from "react-helmet";
-
 import { Link } from "react-router-dom";
+
+import { chatPath } from "../../Constants/path";
 
 import "./Join.css";
 
@@ -34,7 +35,7 @@ const Join = () => {
           </div>
 
           <Link
-            to={`/chat?name=${name}&room=${room}`}
+            to={`${chatPath}?name=${name}&room=${room}`}
             onClick={(event) => (!name || !room) && event.preventDefault()}
           >
             <button className="button mt-20" type="submit">

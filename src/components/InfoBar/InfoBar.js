@@ -1,8 +1,10 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import onlineIcon from "../../assets/icons/onlineIcon.png";
 import closeIcon from "../../assets/icons/closeIcon.png";
-import { Link } from "react-router-dom";
+import { rootPath } from "../../Constants/path";
 
 import "./InfoBar.css";
 
@@ -13,7 +15,7 @@ const InfoBar = ({ room }) => (
       <h3>{room}</h3>
     </div>
     <div className="rightInnerContainer">
-      <Link to="/">
+      <Link to={rootPath}>
         <img src={closeIcon} alt="close icon" />
       </Link>
     </div>
