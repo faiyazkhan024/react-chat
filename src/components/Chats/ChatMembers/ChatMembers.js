@@ -5,7 +5,6 @@ import { BsDot } from "react-icons/bs";
 import classes from "./ChatMembers.module.css";
 
 const ChatMembers = ({ users }) => {
-  console.log(users);
   return (
     <div className={classes.Container}>
       <div className={classes.Heading}>
