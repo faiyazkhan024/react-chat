@@ -7,17 +7,21 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import Chat from "./pages/Chat/Chat";
-import Join from "./pages/Join/Join";
+import Layout from "./components/Layout/Layout";
 
-import { rootPath, chatPath } from "./Constants/path";
+import Auth from "./pages/Auth/Auth";
+import Chat from "./pages/Chat/Chat";
+
+import { rootPath, chatPath } from "./constants/paths";
 
 const App = () => (
   <Router>
     <Switch>
       <Redirect exact from="/" to={rootPath} />
-      <Route path={rootPath} exact component={Join} />
-      <Route path={chatPath} component={Chat} />
+      <Route path={rootPath} exact component={Auth} />
+      <Layout>
+        <Route path={chatPath} component={Chat} />
+      </Layout>
     </Switch>
   </Router>
 );

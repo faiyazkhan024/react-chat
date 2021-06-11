@@ -1,0 +1,21 @@
+.Form {
+  display: flex;
+  height: 10%;
+  align-content: center;
+  justify-content: center;
+}
+
+.Button {
+  all: unset;
+  font-size: 2rem;
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+@media (max-width: 280px) {
+  .sendButton {
+    padding: 10px 15px;
+    font-size: 0.7rem;
+  }
+}

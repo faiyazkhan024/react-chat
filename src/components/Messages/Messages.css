@@ -1,6 +1,0 @@
-.messages {
-  padding: 1px 0;
-  overflow: auto;
-  flex: auto;
-  border: 2px solid var(--secondary_color);
-}

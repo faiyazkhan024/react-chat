@@ -1,0 +1,29 @@
+.Navbar {
+  background-color: var(--primary);
+  color: rgba(var(--white_rgb), 0.7);
+  width: 5rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem 0 0 3rem;
+}
+
+.Container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.Menu {
+  height: 15%;
+}
+
+.NavItems {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
