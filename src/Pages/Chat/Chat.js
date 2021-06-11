@@ -4,12 +4,11 @@ import queryString from "query-string";
 import io from "socket.io-client";
 import { Helmet } from "react-helmet";
 
-import InfoBar from "../../components/InfoBar/InfoBar";
-import Input from "../../components/Input/Input";
-import Messages from "../../components/Messages/Messages";
-import TextContainer from "../../components/TextContainer/TextContainer";
+import ChatGroups from "../../components/Chats/ChatGroups/ChatGroups";
+import ChatScreen from "../../components/Chats/ChatScreen/ChatsScreen";
+import ChatMembers from "../../components/Chats/ChatMembers/ChatMembers";
 
-import "./Chat.css";
+import classes from "./Chat.module.css";
 
 let socket;
 
@@ -64,17 +63,20 @@ const Chat = ({ location }) => {
       <Helmet>
         <title>ReactChat | Room {room}</title>
       </Helmet>
-      <div className="outerContainer">
-        <div className="container">
-          <InfoBar room={room} />
-          <Messages messages={messages} name={name} />
-          <Input
-            setMessage={setMessageContent}
-            sendMessage={sendMessage}
-            message={messageContent}
-          />
-        </div>
-        <TextContainer users={users} />
+
+      <div className={classes.Container}>
+        <ChatGroups />
+        <hr />
+        <ChatScreen
+          name={name}
+          room={room}
+          messages={messages}
+          message={messageContent}
+          sendMessage={sendMessage}
+          setMessage={setMessageContent}
+        />
+        <hr />
+        <ChatMembers users={users} />
       </div>
     </>
   );
