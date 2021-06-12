@@ -12,6 +12,11 @@
   border-bottom: var(--primary) 2px solid;
 }
 
+.MemberList {
+  height: 85%;
+  overflow: auto;
+}
+
 .User {
   height: 5rem;
   display: flex;
@@ -23,14 +28,13 @@
   padding-left: 2rem;
 }
 
-.Active {
-  color: var(--success);
-  font-size: 1.5rem;
-}
-
 .Separator {
   width: 90%;
   height: 1px;
   background: var(--light_grey);
   margin: auto;
+}
+.Active {
+  color: var(--success);
+  font-size: 1.5rem;
 }

@@ -2,6 +2,8 @@ import React from "react";
 
 import { BiSearch, BiCommentAdd } from "react-icons/bi";
 
+import IconButton from "../../utilities/IconButton/IconButton";
+
 import classes from "./ChatGroups.module.css";
 
 const ChatGroups = () => {
@@ -10,14 +12,11 @@ const ChatGroups = () => {
       <div className={classes.TopBar}>
         <h2>Groups</h2>
         <div className={classes.Options}>
-          <div className={classes.Search}>
-            <BiSearch />
-          </div>
-          <div className={classes.Add}>
-            <BiCommentAdd />
-          </div>
+          <IconButton Icon={BiSearch} className={classes.Search} />
+          <IconButton Icon={BiCommentAdd} className={classes.Add} />
         </div>
       </div>
+      <div className={classes.GroupList}></div>
     </div>
   );
 };

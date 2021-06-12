@@ -5,26 +5,26 @@
 
 .TopBar {
   height: 10%;
+  width: 100%;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.TopBar h2 {
-  padding-left: 1rem;
-}
-
 .Options {
-  font-size: 1.5rem;
   display: flex;
-  padding-right: 1.5rem;
 }
 
 .Search {
-  padding-right: 1.5rem;
   color: var(--grey);
 }
 
 .Add {
   color: var(--primary);
+}
+
+.GroupList {
+  height: 85%;
+  overflow: auto;
 }

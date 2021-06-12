@@ -4,6 +4,7 @@ import cnj from "classnames";
 import { BsChatDotsFill, BsBell } from "react-icons/bs";
 
 import Input from "../../utilities/Input/Input";
+import IconButton from "../../utilities/IconButton/IconButton";
 
 import classes from "./Header.module.css";
 
@@ -21,7 +22,7 @@ const Header = ({ className }) => {
             placeholder="search "
             type="search"
           />
-          <BsBell className={classes.Icon} />
+          <IconButton className={classes.Icon} Icon={BsBell} />
           <div className={classes.Avatar} />
         </div>
       </div>

@@ -8,19 +8,20 @@ const ChatMembers = ({ users }) => {
   return (
     <div className={classes.Container}>
       <div className={classes.Heading}>
-        <h2>Chat Members</h2>
+        <h2>Group Members</h2>
       </div>
-
-      {users.map((user) => (
-        <React.Fragment key={user.id}>
-          <div className={classes.User}>
-            <h4>
-              {user.name} <BsDot className={classes.Active} />
-            </h4>
-          </div>
-          <div className={classes.Separator} />
-        </React.Fragment>
-      ))}
+      <div className={classes.MemberList}>
+        {users.map((user) => (
+          <React.Fragment key={user.id}>
+            <div className={classes.User}>
+              <h4>
+                {user.name} <BsDot className={classes.Active} />
+              </h4>
+            </div>
+            <div className={classes.Separator} />
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 };
