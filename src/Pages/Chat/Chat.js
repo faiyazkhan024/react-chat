@@ -17,10 +17,10 @@ const Chat = ({ location }) => {
   const [room, setRoom] = useState("");
   const [users, setUsers] = useState([]);
 
-  const [messageContent, setMessageContent] = useState("");
+  const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
-  const ENDPOINT = "https://neschat-api.herokuapp.com/";
+  const ENDPOINT = "http://localhost:5000/";
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -50,10 +50,9 @@ const Chat = ({ location }) => {
 
   const sendMessage = (event) => {
     event.preventDefault();
-
-    if (messageContent) {
-      socket.emit("sendMessage", messageContent, () => {
-        setMessageContent("");
+    if (message) {
+      socket.emit("sendMessage", message, () => {
+        setMessage("");
       });
     }
   };
@@ -70,10 +69,10 @@ const Chat = ({ location }) => {
         <ChatScreen
           name={name}
           room={room}
+          message={message}
           messages={messages}
-          message={messageContent}
+          setMessage={setMessage}
           sendMessage={sendMessage}
-          setMessage={setMessageContent}
         />
         <hr />
         <ChatMembers users={users} />

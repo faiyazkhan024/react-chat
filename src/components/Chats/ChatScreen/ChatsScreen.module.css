@@ -19,6 +19,13 @@
 }
 
 .RoomName h1 {
-  padding-left: 4rem;
+  padding: 4rem;
   font-weight: 500;
+}
+
+.ScrollToBottom {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: var(--secondary);
 }

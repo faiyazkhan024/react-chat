@@ -19,11 +19,12 @@ const ChatScreen = ({
     <div className={classes.RoomName}>
       <h1>{room}</h1>
     </div>
-    <ScrollToBottom className={classes.ChatScreen}>
+    <ScrollToBottom
+      className={classes.ChatScreen}
+      followButtonClassName={classes.ScrollToBottom}
+    >
       {messages.map((message, i) => (
-        <div key={i}>
-          <Message message={message} name={name} />
-        </div>
+        <Message message={message} name={name} key={i} />
       ))}
     </ScrollToBottom>
     <MessageInput
