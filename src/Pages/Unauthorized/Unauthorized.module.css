@@ -1,0 +1,450 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gandalf {
+  width: 400px;
+  height: 400px;
+  margin-top: 3rem;
+  position: relative;
+  animation: floating 1s infinite alternate ease-in-out;
+}
+
+.gandalf div {
+  position: absolute;
+}
+
+.gandalf::before {
+  content: "";
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gandalf .fireball {
+  bottom: 0;
+  left: 50px;
+  width: 300px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    var(--accent),
+    var(--accent),
+    var(--error),
+    var(--black)
+  );
+  border: 5px solid var(--black);
+}
+
+.gandalf .skirt {
+  bottom: 50px;
+  left: 100px;
+  border-bottom: 230px solid var(--light_grey);
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  filter: drop-shadow(0 0 6px var(--light_grey));
+}
+
+.gandalf .skirt::before {
+  content: "";
+  position: absolute;
+  background-color: var(--light_grey);
+  width: 100px;
+  height: 21px;
+  top: 230px;
+  left: 0px;
+  border-bottom-right-radius: 180%;
+  border-bottom-left-radius: 100%;
+}
+
+.gandalf .skirt::after {
+  content: "";
+  position: absolute;
+  background-color: var(--light_grey);
+  width: 100px;
+  height: 28px;
+  top: 230px;
+  left: -100px;
+  border-bottom-right-radius: 80%;
+  border-bottom-left-radius: 180%;
+}
+
+.gandalf .sleeves::before,
+.gandalf .sleeves::after {
+  content: "";
+  position: absolute;
+  border-bottom: 70px solid var(--light_grey);
+  filter: drop-shadow(0 0 6px var(--light_grey));
+}
+
+.gandalf .sleeves::before {
+  top: 130px;
+  left: 191px;
+  border-left: 100px solid transparent;
+  border-right: 40px solid transparent;
+  transform: rotate(-34deg);
+}
+
+.gandalf .sleeves::after {
+  top: 127px;
+  left: 70px;
+  border-left: 40px solid transparent;
+  border-right: 100px solid transparent;
+  transform: rotate(41deg);
+}
+
+.gandalf .shoulders {
+  background-color: var(--light_grey);
+  border-radius: 50%;
+  width: 100px;
+  height: 130px;
+  left: 150px;
+  top: 120px;
+}
+
+.gandalf .shoulders .hand {
+  width: 33px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--cream);
+  top: -6px;
+}
+
+.gandalf .shoulders .left {
+  left: -70px;
+  transform: rotate(-20deg);
+}
+
+.gandalf .shoulders .left::after {
+  content: "";
+  position: absolute;
+  background-color: var(--dark_grey);
+  width: 126px;
+  height: 8px;
+  border-radius: 4px;
+  transform: rotate(-105deg);
+  transform-origin: bottom;
+  top: -48px;
+  left: -56px;
+}
+
+.gandalf .shoulders .right {
+  right: -70px;
+  transform: rotate(20deg);
+}
+
+.gandalf .shoulders .right::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent);
+  width: 250px;
+  height: 5px;
+  border-radius: 2.5px;
+  transform: rotate(-78deg);
+  transform-origin: left;
+  bottom: -100px;
+  left: 0;
+}
+
+.gandalf .head {
+  width: 80px;
+  height: 90px;
+  top: 80px;
+  left: 160px;
+  background-color: var(--cream);
+  border-radius: 50%;
+}
+
+.gandalf .head::before,
+.gandalf .head::after {
+  content: "";
+  position: absolute;
+  background-color: var(--black);
+}
+
+.gandalf .head::before {
+  width: 13px;
+  height: 5px;
+  border-radius: 3px;
+  top: 42px;
+  left: 22px;
+  transform: rotate(19deg);
+}
+
+.gandalf .head::after {
+  width: 13px;
+  height: 5px;
+  border-radius: 3px;
+  top: 42px;
+  right: 22px;
+  transform: rotate(-19deg);
+}
+
+.gandalf .head .hair {
+  width: 70px;
+  height: 30px;
+  background-color: var(--grey);
+  border-radius: 50%;
+  top: 0px;
+  left: 5px;
+}
+
+.gandalf .head .hair::before,
+.gandalf .head .hair::after {
+  content: "";
+  position: absolute;
+  background-color: var(--grey);
+}
+
+.gandalf .head .hair::before {
+  top: 13px;
+  left: -16px;
+  width: 25px;
+  height: 100px;
+  border-top-left-radius: 34px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 20px;
+  transform: rotate(8deg);
+}
+
+.gandalf .head .hair::after {
+  top: 13px;
+  right: -16px;
+  width: 25px;
+  height: 100px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 34px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 100px;
+  transform: rotate(-10deg);
+}
+
+.gandalf .head .beard {
+  top: 64px;
+  left: 5px;
+  border-top: 80px solid var(--grey);
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-radius: 30px;
+}
+
+.gandalf .head .beard::before {
+  content: "";
+  position: absolute;
+  background-color: var(--pink);
+  width: 20px;
+  height: 5px;
+  border-radius: 40%;
+  top: -70px;
+  left: -9px;
+}
+
+.Message {
+  max-width: 700px;
+  display: block;
+  padding: 3rem;
+  font-size: 1.3rem;
+}
+
+.Link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: var(--white);
+  background: var(--black);
+  border-radius: 3rem;
+}
+
+@media screen and (min-width: 280px) and (max-width: 592px) {
+  .gandalf {
+    width: 200px;
+    height: 200px;
+    margin-top: 3rem;
+  }
+
+  .gandalf::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .gandalf .fireball {
+    bottom: 0;
+    left: 25px;
+    width: 150px;
+    height: 50px;
+
+    border: 2.5px solid var(--black);
+  }
+
+  .gandalf .skirt {
+    bottom: 25px;
+    left: 50px;
+    border-bottom: 132px solid var(--light_grey);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+  }
+
+  .gandalf .skirt::before {
+    width: 50px;
+    height: 10.5px;
+    top: 132px;
+    border-bottom-right-radius: 180%;
+    border-bottom-left-radius: 100%;
+  }
+
+  .gandalf .skirt::after {
+    width: 50px;
+    height: 14px;
+    top: 132px;
+    left: -50px;
+    border-bottom-right-radius: 80%;
+    border-bottom-left-radius: 180%;
+  }
+
+  .gandalf .sleeves::before,
+  .gandalf .sleeves::after {
+    border-bottom: 35px solid var(--light_grey);
+    filter: drop-shadow(0 0 3px var(--light_grey));
+  }
+
+  .gandalf .sleeves::before {
+    top: 65px;
+    left: 95.5px;
+    border-left: 50px solid transparent;
+    border-right: 20px solid transparent;
+  }
+
+  .gandalf .sleeves::after {
+    top: 63.5px;
+    left: 35px;
+    border-left: 20px solid transparent;
+    border-right: 50px solid transparent;
+  }
+
+  .gandalf .shoulders {
+    width: 50px;
+    height: 65px;
+    left: 75px;
+    top: 60px;
+  }
+
+  .gandalf .shoulders .hand {
+    width: 16.5px;
+    height: 13px;
+
+    top: -3px;
+  }
+
+  .gandalf .shoulders .left {
+    left: -35px;
+  }
+
+  .gandalf .shoulders .left::after {
+    width: 63px;
+    height: 4px;
+    border-radius: 2px;
+
+    top: -24px;
+    left: -28px;
+  }
+
+  .gandalf .shoulders .right {
+    right: -35px;
+  }
+
+  .gandalf .shoulders .right::after {
+    width: 125px;
+    height: 2.5px;
+    border-radius: 2.5px;
+
+    transform-origin: left;
+    bottom: -50px;
+  }
+
+  .gandalf .head {
+    width: 40px;
+    height: 45px;
+    top: 40px;
+    left: 80px;
+  }
+
+  .gandalf .head::before {
+    width: 6.5px;
+    height: 2.5px;
+    border-radius: 3px;
+    top: 21px;
+    left: 11px;
+  }
+
+  .gandalf .head::after {
+    width: 7.5px;
+    height: 2.5px;
+    border-radius: 3px;
+    top: 21px;
+    right: 11px;
+  }
+
+  .gandalf .head .hair {
+    width: 35px;
+    height: 15px;
+
+    left: 2.5px;
+  }
+
+  .gandalf .head .hair::before {
+    top: 6.5px;
+    left: -8px;
+    width: 12.5px;
+    height: 50px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 7.5px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .gandalf .head .hair::after {
+    top: 6.5px;
+    right: -8px;
+    width: 12.5px;
+    height: 50px;
+    border-top-left-radius: 7.5px;
+    border-top-right-radius: 17px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .gandalf .head .beard {
+    top: 32px;
+    left: 2.5px;
+    border-top: 40px solid var(--grey);
+    border-left: 17.5px solid transparent;
+    border-right: 17.5px solid transparent;
+    border-radius: 15px;
+  }
+
+  .gandalf .head .beard::before {
+    width: 10px;
+    height: 2.5px;
+    border-radius: 40%;
+    top: -35px;
+    left: -4.5px;
+  }
+
+  .Message {
+    font-size: 1rem;
+  }
+
+  .Link {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

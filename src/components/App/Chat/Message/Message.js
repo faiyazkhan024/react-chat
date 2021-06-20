@@ -2,7 +2,7 @@ import React from "react";
 
 import ReactEmoji from "react-emoji";
 
-import currentTime from "../../../utils/currentTime";
+import currentTime from "../../../../utilities/currentTime";
 
 import classes from "./Message.module.css";
 

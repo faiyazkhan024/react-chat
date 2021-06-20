@@ -1,4 +1,5 @@
 import cnj from "classnames";
+import React from "react";
 
 import classes from "./Input.module.css";
 
@@ -14,7 +15,7 @@ const Input = ({
   classNameLabel,
 }) => {
   return (
-    <>
+    <React.Fragment>
       {showLabel && (
         <label className={cnj(classNameLabel, classes.label)}>
           {label ? label : placeholder}
@@ -28,7 +29,7 @@ const Input = ({
         onChange={(event) => onChange && onChange(event)}
         onKeyPress={(event) => onKeyPress && onKeyPress(event)}
       />
-    </>
+    </React.Fragment>
   );
 };
 

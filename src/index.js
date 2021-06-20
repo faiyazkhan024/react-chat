@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
 
+import * as serviceWorkerRegistration from "./utilities/serviceWorkerRegistration";
+import reportWebVitals from "./utilities/reportWebVitals";
+
 import "./index.css";
-import "./var.css";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,16 +1,18 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
+import cnj from "classnames";
 
 import classes from "./Button.module.css";
 
-const Button = ({ path, onClick, children, disabled }) => {
+const Button = (props) => {
   return (
-    <Link to={path} onClick={(event) => onClick(event)}>
-      <button disabled={disabled} className={classes.Button} type="submit">
-        {children}
-      </button>
-    </Link>
+    <button
+      type={props.type}
+      className={cnj(props.className, classes.Button)}
+      disabled={props.disabled}
+      onClick={(event) => props.onClick && props.onClick(event)}
+    >
+      {props.children}
+    </button>
   );
 };
 

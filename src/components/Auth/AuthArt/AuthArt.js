@@ -1,3 +1,5 @@
+import React from "react";
+
 import Chat from "../../Svg/Chat";
 import Windows from "../../Svg/Windows";
 

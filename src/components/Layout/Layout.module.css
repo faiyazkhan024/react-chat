@@ -9,8 +9,8 @@
 
 .Layout {
   display: flex;
-  height: 900px;
-  width: 1800px;
+  height: 90%;
+  width: 95%;
   margin: 30px;
   border-radius: 3rem;
   background: var(--white);

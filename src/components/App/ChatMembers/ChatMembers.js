@@ -1,17 +1,17 @@
 import React from "react";
 
-import { BsDot } from "react-icons/bs";
+// import { BsDot } from "react-icons/bs";
 
 import classes from "./ChatMembers.module.css";
 
-const ChatMembers = ({ users }) => {
+const ChatMembers = () => {
   return (
     <div className={classes.Container}>
       <div className={classes.Heading}>
         <h2>Group Members</h2>
       </div>
       <div className={classes.MemberList}>
-        {users.map((user) => (
+        {/* {users.map((user) => (
           <React.Fragment key={user.id}>
             <div className={classes.User}>
               <h4>
@@ -20,7 +20,7 @@ const ChatMembers = ({ users }) => {
             </div>
             <div className={classes.Separator} />
           </React.Fragment>
-        ))}
+        ))} */}
       </div>
     </div>
   );

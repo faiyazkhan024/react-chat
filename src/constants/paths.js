@@ -1,3 +1,5 @@
 export const rootPath = "/ReactChat";
 
-export const chatPath = `${rootPath}/chat`;
+export const appPath = `${rootPath}/app`;
+
+export const unauthorizedPath = `${rootPath}/unauthorized`;

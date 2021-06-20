@@ -2,8 +2,8 @@ import React from "react";
 
 import { IoSend, IoAttach } from "react-icons/io5";
 
-import Input from "../../utilities/Input/Input";
-import IconButton from "../../utilities/IconButton/IconButton";
+import Input from "../../../utilities/Input/Input";
+import IconButton from "../../../utilities/IconButton/IconButton";
 
 import classes from "./MessageInput.module.css";
 
