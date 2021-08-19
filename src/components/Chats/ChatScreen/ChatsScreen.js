@@ -1,7 +1,5 @@
 import React from "react";
 
-import ScrollToBottom from "react-scroll-to-bottom";
-
 import Message from "../Message/Message";
 import MessageInput from "../MessageInput/MessageInput";
 
@@ -19,14 +17,14 @@ const ChatScreen = ({
     <div className={classes.RoomName}>
       <h1>{room}</h1>
     </div>
-    <ScrollToBottom
+    <div
       className={classes.ChatScreen}
       followButtonClassName={classes.ScrollToBottom}
     >
       {messages.map((message, i) => (
         <Message message={message} name={name} key={i} />
       ))}
-    </ScrollToBottom>
+    </div>
     <MessageInput
       setMessage={setMessage}
       sendMessage={sendMessage}
